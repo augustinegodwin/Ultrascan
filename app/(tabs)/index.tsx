@@ -35,7 +35,7 @@ const TOOLS: Tool[] = [
   { id: "edit-doc",     label: "Edit Doc",      icon: "edit-2",     route: "/edit-document",    iconColor: "#EC4899", bgColor: "#FDF2F8" },
   { id: "qr-generator", label: "QR Generator",  icon: "grid",       route: "/generator",        iconColor: "#10B981", bgColor: "#ECFDF5" },
   { id: "files",        label: "All Files",     icon: "folder",     route: "/(tabs)/files",     iconColor: "#F59E0B", bgColor: "#FFFBEB" },
-  { id: "scan-quick",   label: "Quick Scan",    icon: "zap",        route: "/scanner",          iconColor: "#0099CC", bgColor: "#E0F5FF" },
+  { id: "scan-quick",   label: "Quick Scanner",    icon: "zap",        route: "/scanner",          iconColor: "#0099CC", bgColor: "#E0F5FF" },
 ];
 
 type RecentFile = {
@@ -135,7 +135,7 @@ async function loadRecentFiles(): Promise<RecentFile[]> {
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
-  const topPad = Platform.OS === "web" ? 67 : insets.top;
+  const topPad = Platform.OS === "web" ? 67 : insets.top ;
   const [recentFiles, setRecentFiles] = useState<RecentFile[]>([]);
 
   useFocusEffect(
