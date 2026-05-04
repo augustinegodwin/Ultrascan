@@ -18,7 +18,7 @@ function NativeTabLayout() {
         <Label>Home</Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="files">
-        <Icon sf={{ default: "bag", selected: "folder.fill" }} />
+        <Icon sf={{ default: "folder", selected: "folder.fill" }} />
         <Label>Files</Label>
       </NativeTabs.Trigger>
     </NativeTabs>

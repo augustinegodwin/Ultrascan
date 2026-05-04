@@ -27,27 +27,25 @@ export const Colors = {
   },
 };
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
+export const Fonts = {
+  // Use Medium as your "standard" sans for a more modern, bold look
+  sans: 'pally-Medium', 
+  medium:'pally-Medium',
+  regular:'pally-Regular',
+  bold: 'pally-Bold',
+  
+  // Update the defaults so your app uses these everywhere
   default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
+    sans: 'pally-Medium',
+    serif: 'serif', // Or a custom serif if you have one
+    rounded: 'pally-Medium', 
     mono: 'monospace',
   },
-  web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-  },
-});
+
+  // If you want to keep the platform-specific logic but use your fonts:
+  custom: Platform.select({
+    ios: 'pally-Medium',
+    android: 'pally-Medium',
+    default: 'pally-Medium',
+  }),
+};

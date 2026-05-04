@@ -23,7 +23,7 @@ export default {
     tabIconSelected: primaryLight,
   },
   light: {
-    background: "#F7F8FA",
+    background: "#FFFFFF",
     surface: "#FFFFFF",
     surfaceElevated: "#FFFFFF",
     border: "#E5E7EB",
@@ -36,7 +36,7 @@ export default {
     success: "#10B981",
     warning: "#F59E0B",
     error: "#EF4444",
-    tabBar: "rgba(255,255,255,0.94)",
+    tabBar: "#FFFFFF",
     tint: primary,
     tabIconDefault: "#9CA3AF",
     tabIconSelected: primary,
